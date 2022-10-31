@@ -1,82 +1,33 @@
-// Место для первой задачи
-function firstTask() {
-  // Пишем решение вот тут
-  for (let i = 5; i <= 10; i +=1){
-    console.log(i)
-  }
 
-}
-
-// Место для второй задачи
-function secondTask() {
-  // Пишем решение вот тут
-  for (let i = 20; i >= 10; i -=1){
-    console.log(i);
-    if (i === 13) {
-      break;
-    }
-  }
-
-}
-
-// Место для третьей задачи
-function thirdTask() {
-  // Пишем решение вот тут
-  for (let i = 2; i <= 10; i += 1){
-    if (i%2 === 0) {
-      console.log(i);
-    }
-  }
-
-}
-
-// Место для четвертой задачи
-
-// Цикл, который нужно переписать:
-
-// for (let i = 2; i <= 16; i++) {
-//     if (i % 2 === 0) {
-//         continue;
-//     } else {
-//         console.log(i);
-//     }
+// function firstTask() {
+//   // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//   const data = [5, 10, 'Shopping', 20, 'Homework'];
+//   const result = [];
+//
+// for (let i = data.length - 1; i >= 0; i -= 1){
+//   result[i] = data[data.length -1 - i]
+//   console.log(result)
 // }
+//   // console.log(result)
+//   // Не трогаем
+//   return result;
+// }
+// firstTask()
 
-function fourthTask() {
-  // Пишем решение вот тут
-  let i = 2;
-  while (i <= 16) {
-    if (i % 2 !== 0){
-      console.log(i);
-    }
-    i +=1;
+
+
+
+const lines = 5;
+let result = '';
+
+for (let i = 0; i <= lines; i++) {
+  for (let j = 0; j <= lines - i; j++) {
+    result += " ";
   }
-
-}
-
-// Место для пятой задачи
-
-function fifthTask() {
-  const arrayOfNumbers = [];
-
-  first: for (let i = 5; i <= 10; i += 1){
-    for (let j = i - 5; j <= 5; j += 1){
-      arrayOfNumbers[j] = i;
-      continue first;
-    }
+  for (let j = 0; j < 2 * i + 1; j++) {
+    result += "*";
   }
-  return arrayOfNumbers;
+  result += "\n";
 }
 
-
-function firstTask() {
-  // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-  const arr = [3, 5, 8, 16, 20, 23, 50];
-  const result = [];
-
-  // Пишем решение вот тут
-
-
-  // Не трогаем
-  return result;
-}
+console.log(result)
