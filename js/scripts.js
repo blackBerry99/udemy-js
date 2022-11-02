@@ -1,33 +1,29 @@
-
-// function firstTask() {
-//   // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-//   const data = [5, 10, 'Shopping', 20, 'Homework'];
-//   const result = [];
-//
-// for (let i = data.length - 1; i >= 0; i -= 1){
-//   result[i] = data[data.length -1 - i]
-//   console.log(result)
-// }
-//   // console.log(result)
-//   // Не трогаем
-//   return result;
-// }
-// firstTask()
-
-
-
-
-const lines = 5;
-let result = '';
-
-for (let i = 0; i <= lines; i++) {
-  for (let j = 0; j <= lines - i; j++) {
-    result += " ";
-  }
-  for (let j = 0; j < 2 * i + 1; j++) {
-    result += "*";
-  }
-  result += "\n";
+// Место для первой задачи
+function sayHello(name) {
+  return 'Привет, ' + name
 }
 
-console.log(result)
+// Место для второй задачи
+function returnNeighboringNumbers(number) {
+  let arr = []
+  arr[0] = number -1
+  arr[1] = number
+  arr [2] = number + 1
+  return arr
+}
+
+// Место для третьей задачи
+function getMathResult(base, iterator) {
+  let result = 0
+  let resultString = ''
+  if (iterator <= 0 || typeof(iterator) !="number"){
+    resultString = base
+  }
+  for (let i = 1; i <= iterator; i +=1){
+    result += base
+    if (i === iterator) {
+      resultString +=result
+    } else resultString +=result + '---'
+  }
+  return resultString
+}
